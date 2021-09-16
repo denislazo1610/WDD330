@@ -22,10 +22,14 @@ h3 {
 
 #firstPart div,
 #secondPart {
-  flex: auto;
+  flex: 50%;
   border: dashed black;
 }
 
 #secondPart {
   margin-top: 1rem;
+}
+
+li {
+  padding: 0 2rem;
 }
