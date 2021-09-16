@@ -13,3 +13,11 @@ h2 {
     padding: 0.5em;
     border: solid black;
 }
+
+div {
+    display: flex;
+}
+
+section {
+    flex: 50%;
+}
