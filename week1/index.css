@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
 }
 
 h1 {
@@ -32,4 +32,21 @@ h3 {
 
 li {
   padding: 0 2rem;
+}
+
+@media (max-width: 850px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  #firstPart {
+    flex-direction: column;
+  }
+
+  #firstPart div,
+  #secondPart {
+    border: solid;
+    margin: 1rem 0;
+  }
 }
