@@ -4,7 +4,12 @@ body {
 }
 
 h1 {
+    text-align: center;
+}
+
+h2 {
     background-color: antiquewhite;
     text-align: center;
     padding: 0.5em;
+    border: solid black;
 }
