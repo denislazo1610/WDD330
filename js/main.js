@@ -9,8 +9,12 @@ const links = [
 
 var list = document.querySelector('ol');
 
-var li = document.createElement('li');
 
-li.appendChild(document.createTextNode("Week1 Notes"));
-
-list.appendChild(li);
+for(var number = 0; number < links.length; number++){
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.innerHTML = links[number].label;
+    a.href = links[number].url;
+    li.appendChild(a);
+    list.appendChild(li);
+}
