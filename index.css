@@ -1,23 +1,33 @@
 body {
-    margin: 0 auto;
-    width: 70%;
+  margin: 0 auto;
+  width: 70%;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+  background-color: #4c230a;
+  color: white;
+  margin-bottom: 0;
+  padding: 0.5rem 0;
 }
 
 h2 {
-    background-color: antiquewhite;
-    text-align: center;
-    padding: 0.5em;
-    border: solid black;
+  background-color: #f0ffce;
+  text-align: center;
+  padding: 0.5em;
+  border: solid black;
+  margin-top: 0;
 }
 
 div {
-    display: flex;
+  display: flex;
 }
 
 section {
-    flex: 50%;
+  flex: auto;
+  border: dashed black;
+}
+
+h3 {
+  text-align: center;
 }
