@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
 }
 
 h1 {
@@ -30,4 +30,14 @@ section {
 
 h3 {
   text-align: center;
+}
+
+@media (max-width: 850px) {
+  body {
+    width: 95%;
+  }
+
+  div {
+    flex-direction: column;
+  }
 }
