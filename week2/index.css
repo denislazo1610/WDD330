@@ -1,0 +1,52 @@
+body {
+  margin: 0 auto;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+  background-color: #ccc9a1;
+  border: solid black;
+  padding: 1rem 0;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#firstPart {
+  display: flex;
+}
+
+#firstPart div,
+#secondPart {
+  flex: 50%;
+  border: dashed black;
+}
+
+#secondPart {
+  margin-top: 1rem;
+}
+
+li {
+  padding: 0 2rem;
+}
+
+@media (max-width: 850px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  #firstPart {
+    flex-direction: column;
+  }
+
+  #firstPart div,
+  #secondPart {
+    border: solid;
+    margin: 1rem 0;
+  }
+}
