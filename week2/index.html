@@ -8,14 +8,35 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Week 1</h1>
+    <h1>Week 2</h1>
     <div id="firstPart">
       <div>
         <h3>Notes</h3>
         <ul>
-          <li>
-            In order to make a project, always start from the cell phone size
-          </li>
+          <li>Object Structure</li>
+          <pre><code>const name = { value: 'Alexa'};</code></pre>
+          <li>To find the length of anything, do this</li>
+          <pre><code>const name = 'Alexa';
+name.length;</code></pre>
+          <li>Array</li>
+          <pre><code>const myArray = [] // To create array
+
+myArray.pop(); // To remove last item of array
+myArray.shift(); // To remove first item of array
+myArray.push('value'); // Add a new value to end of array
+myArray.unshift('value'); // Add a new value in start of array</code></pre>
+          <li>Sets (no repeat value)</li>
+          <pre><code>const list = new Set();
+list.add(1); // To add a value to set
+const list2 = new Set([1,2,3]); // Set with values in it
+list.delete(1); // To delete a value 
+list.clear(); // To remove all values 
+const listArray = Array.from(list); // To convert set to array</code></pre>
+          <li>Maps (with indexes)</li>
+          <pre><code>const romanNumerals = new Map();
+romanNumerals.set(1,'I'); // Add value 
+romanNumerals.get(1) // I 
+romanNumerals.remove(1) // Remove value</code></pre>
         </ul>
       </div>
       <div>
