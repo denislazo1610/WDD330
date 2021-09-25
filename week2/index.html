@@ -48,6 +48,74 @@ romanNumerals.remove(1) // Remove value</code></pre>
     </div>
     <div id="secondPart">
       <h3>Challenges</h3>
+      <ul>
+        <li>Minimun Exercise</li>
+        <pre><code>
+        function min(a, b) {
+          return a < b ? a : b;
+        }
+        
+        console.log(min(0, 10));
+        // → 0
+        console.log(min(0, -10));
+        // → -10
+      </code></pre>
+        <li>Bean Counting Exercise</li>
+        <pre><code>
+// Your code here.
+
+function countBs(name){
+  return countChar(name, 'B');
+}
+
+function countChar(name, char){
+  let sum = 0;
+  for(const letra of name){
+    if(char == letra){
+      sum+=1;
+    }
+  }
+  return sum;
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+      </code></pre>
+        <li>The sum of a range</li>
+        <pre><code>
+// Your code here.
+
+function range(start, end, extra){
+  let numbers = [];
+  
+  if (extra == null) extra = 1;
+  
+  while(start != (end + extra)){
+    	numbers.push(start);
+    	start += extra;
+  }
+  
+  return numbers;
+}
+
+function sum(MyArray){
+  let sum = 0;
+  for(const number of MyArray){
+    sum += number;
+  }
+  return sum;
+}
+
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(range(5, 2, -1));
+// → [5, 4, 3, 2]
+console.log(sum(range(1, 10)));
+// → 55
+      </code></pre>
+      </ul>
       <h2>To use in arrays (To practice more)</h2>
       <ol>
         <li>To use sort()</li>
@@ -57,7 +125,9 @@ romanNumerals.remove(1) // Remove value</code></pre>
         <li>To use filter()</li>
       </ol>
       <h2>Link for the Team Activity</h2>
-      <a href="Group/index.html">Team Activity</a>
+      <ul>
+        <li><a href="Group/index.html">Team Activity</a></li>
+      </ul>
     </div>
   </body>
 </html>
