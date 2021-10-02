@@ -65,7 +65,64 @@
     </div>
     <div id="secondPart">
       <h3>Challenges</h3>
-      <ul></ul>
+      <ul>
+        <li>First Challenge</li>
+        <pre><code>
+          
+    const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+    ];
+    
+    // Your code here
+  
+    const body = document.querySelector('#mountains');
+    const table = document.createElement('table');
+  
+    const spaceTitles = document.createElement('tr');
+    
+    const nombre1 = document.createElement('th');
+    nombre1.textContent = 'Name';
+    
+    const nombre2 = document.createElement('th');
+    nombre2.textContent = 'Height';
+    
+    const nombre3 = document.createElement('th');
+    nombre3.textContent = 'Place';
+    
+    spaceTitles.appendChild(nombre1);
+    spaceTitles.appendChild(nombre2);
+    spaceTitles.appendChild(nombre3);
+    table.appendChild(spaceTitles);
+    
+   
+    
+    for(const key in MOUNTAINS){
+      const space = document.createElement('tr');
+      
+      const nombre = document.createElement('td');
+      nombre.textContent = MOUNTAINS[key].name
+      space.appendChild(nombre);
+      
+      const altura = document.createElement('td');
+      altura.textContent = MOUNTAINS[key].height;
+      space.appendChild(altura);
+      
+      const lugar = document.createElement('td');
+      lugar.textContent = MOUNTAINS[key].place;
+      space.appendChild(lugar);
+      
+      table.appendChild(space);
+    };
+    
+    body.appendChild(table);
+        </code></pre>
+      </ul>
 
       <h2>Link for the Team Activity</h2>
       <ul>
