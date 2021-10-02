@@ -13,19 +13,54 @@
       <div>
         <h3>Notes</h3>
         <ul>
-          <li></li>
-          <pre><code></code></pre>
+          <li>To create an Object (not recommended)</li>
+          <pre><code>
+  const spiderman = new Object();
+          </code></pre>
+          <li>To create an Object (recommended)</li>
+          <pre><code>
+  const denis = {
+    name: 'Denis',
+    last: 'Lazo',
+    age: 22,
+    major: 'Computer Science'
+  }
+          </code></pre>
+          <li>To see all the keys and values in an object</li>
+          <pre><code>
+  for(const key in denis){
+    if(denis.hasOwnProperty(key)){
+      console.log(`${key} : ${denis[key]}`)
+    }
+  }
+          </code></pre>
+          <li>Event listeners</li>
+          <ol>
+            <li>click</li>
+            <li>mousedown</li>
+            <li>mouseup</li>
+            <li>dblclick</li>
+            <li>mouseover</li>
+            <li>mouseout</li>
+            <li>mousemove</li>
+          </ol>
         </ul>
       </div>
       <div>
         <h3>Questions:</h3>
         <ol>
-          <li></li>
+          <li>
+            Is there a main javaScript file for every website, if so, where is
+            it? how can I find it?
+          </li>
+          <br />
+          <li>
+            When I create a new constant variable and it is equal to an object.
+            Then, why when I changed something in the copy one, the original
+            change as well?
+          </li>
         </ol>
-        <h3>
-          I read all the readings, and I feel like I do not have any other
-          questions to ask.
-        </h3>
+        <h3>All of my questions</h3>
       </div>
     </div>
     <div id="secondPart">
