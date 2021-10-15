@@ -55,12 +55,40 @@ export default class Hikes {
     return this.getAllHikes().find((hike) => hike.name === hikeName);
   }
   //show a list of hikes in the parentElement
-  showHikeList() {}
+  showHikeList() {
+    const names = this.getAllHikes().map((thing) => thing.name);
+    names.forEach((name) => {
+      const lines = document.createElement("li");
+      const content = document.createElement("a");
+      const information = document.createElement("ul");
+      // information.classList.add(``);
+      content.innerHTML = name;
+      lines.appendChild(content);
+      this.parentElement.appendChild(lines);
+      this.parentElement.appendChild(information);
+    });
+
+    // return list;
+  }
   // show one hike with full details in the parentElement
-  showOneHike(hikeName) {}
+  showOneHike(hikeName) {
+    const example = this.getHikeByName(hikeName);
+    console.log(example.description);
+  }
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
     // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
+
+    let sizeOfList = this.parentElement.children.length;
+    const list = this.getAllHikes();
+
+    for (let i = 0; i < sizeOfList; i++) {
+      this.parentElement.children[i].addEventListener("click", function () {
+        console.log(`You are selecting the hike number ${i} `);
+      });
+    }
+
+    // console.log(list);
   }
   buildBackButton() {
     const backButton = document.createElement("button");
@@ -69,7 +97,9 @@ export default class Hikes {
   }
 }
 // methods responsible for building HTML.  Why aren't these in the class?  They don't really need to be, and by moving them outside of the exported class, they cannot be called outside the module...they become private.
-function renderHikeList(parent, hikes) {}
+function renderHikeList(parent, hikes) {
+  parent.appendChild(hikes);
+}
 function renderOneHikeLight(hike) {
   const item = document.createElement("li");
   item.innerHTML = ` <h2>${hike.name}</h2>
