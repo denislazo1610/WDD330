@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 45/title>
+    <title>Week 5</title>
     <link rel="stylesheet" href="../week1/index.css" />
   </head>
   <body>
@@ -13,80 +13,42 @@
       <div>
         <h3>Notes</h3>
         <ul>
-          <li>How to start a Form</li>
-
-          <pre><code>
-&ltform action=""&gt
-    &ltlabel for='heroName'&gtName:
-    &ltinput type='text' id='heroName' name='heroName' placeholder='Super Name' &gt
-    &ltlabel &gt
-&lt/form&gt
-          </code></pre>
-
-          <li>or</li>
-          <pre><code>
-&ltform action=""&gt
-    &ltlabel for='heroName'&gtName:&ltlabel &gt
-    &ltinput type='text' id='heroName' name='heroName' placeholder='Super Name' &gt
-&lt/form&gt
-            </code></pre>
-
-          <li>We have types for input</li>
-          <ol>
-            <li>password</li>
-            <li>checkbox (multiple choice)</li>
-            <li>radio (only one choice)</li>
-            <li>
-              hidden (not shown in the browser but it can leas you to somewhere)
-            </li>
-          </ol>
-          <li>Text Areas</li>
-          <pre><code>
-&ltlabel for='origin'&gtOrigin Story:
-    &lttextarea id='origin' name='origin' rows='20' cols='60'&gt&lttextarea&gt
-&ltlabel&gt
-          </code></pre>
-
-          <li>Encapsulation:</li>
+          <li>Exceptions</li>
           <p>
-            The inner workings are kept hidden inside the object and only the
-            essential functionalities are exposed to the end user. Like a
-            blender, we just know that we need to press a button to make it
-            work, however we do not know what is happening inside
+            Exceptions are errors that produce a return value (key value) that
+            can then be used by the program to deal with the error
           </p>
-          <li>Polymorphism</li>
+          <li>Strict Mode</li>
           <p>
-            The same process can be used for different objects. There are other
-            artefacts that have a button in order to work, just like the
-            blender, but they may give a different output
+            Strict mode, this will produce more errors since it is going to
+            correct poor style codings
           </p>
-          <li>How to create a Class</li>
-          <pre><code>
-
-class Dice {
-    constructor(sides=6){
-        this.sides = sides;
-    }
-        
-    roll(){
-        return Math.floor(this.sides * Math.random() + 1)
-    }
-}
-          </code></pre>
+          <li>Debugging in the Browser</li>
+          <p>
+            It is the proccess of finding out where bugs occur in the code and
+            then dealing with them
+          </p>
+          <li>Debugging Tools</li>
+          <p>
+            Modern browsers also have a debugging tool that allows you to set
+            breakpoints in the code to track bugs and you will be able to modify
+            them. Something really useful is the tool "debugger".
+          </p>
         </ul>
       </div>
       <div>
         <h3>Questions:</h3>
         <ol>
           <li>
-            So far many things in javaScript are called Objects. It came to my
-            mind that anything with brackets {} is a object. Is there anything
-            with bracckets that cannot be called objects?
+            Is the toEqual() only use in if conditions, if not, then for what
+            else it can be used? I am not really sure if this is supposoed to
+            give a true or false return
           </li>
+          <br />
           <li>
-            I know that in function, we can set dafault for parameters. By doing
-            something like function name(parameter1 = 0). Can we do something
-            similar with classes?
+            Besides using the tool "debugger" to catch errors, is there any tool
+            that we can use in VSC? Something similar tot he debugger but not in
+            the browser
           </li>
         </ol>
       </div>
@@ -121,7 +83,7 @@ class Dog {
     }
       </code></pre>
 
-      <a href="group/Tic-Tac-Toe.html">Group Ativity</a>
+      <a href="group/index.html">Group Ativity</a>
     </div>
   </body>
 </html>
