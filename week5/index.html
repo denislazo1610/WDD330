@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 45/title>
+    <link rel="stylesheet" href="../week1/index.css" />
+  </head>
+  <body>
+    <h1>Week 5</h1>
+    <div id="firstPart">
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>How to start a Form</li>
+
+          <pre><code>
+&ltform action=""&gt
+    &ltlabel for='heroName'&gtName:
+    &ltinput type='text' id='heroName' name='heroName' placeholder='Super Name' &gt
+    &ltlabel &gt
+&lt/form&gt
+          </code></pre>
+
+          <li>or</li>
+          <pre><code>
+&ltform action=""&gt
+    &ltlabel for='heroName'&gtName:&ltlabel &gt
+    &ltinput type='text' id='heroName' name='heroName' placeholder='Super Name' &gt
+&lt/form&gt
+            </code></pre>
+
+          <li>We have types for input</li>
+          <ol>
+            <li>password</li>
+            <li>checkbox (multiple choice)</li>
+            <li>radio (only one choice)</li>
+            <li>
+              hidden (not shown in the browser but it can leas you to somewhere)
+            </li>
+          </ol>
+          <li>Text Areas</li>
+          <pre><code>
+&ltlabel for='origin'&gtOrigin Story:
+    &lttextarea id='origin' name='origin' rows='20' cols='60'&gt&lttextarea&gt
+&ltlabel&gt
+          </code></pre>
+
+          <li>Encapsulation:</li>
+          <p>
+            The inner workings are kept hidden inside the object and only the
+            essential functionalities are exposed to the end user. Like a
+            blender, we just know that we need to press a button to make it
+            work, however we do not know what is happening inside
+          </p>
+          <li>Polymorphism</li>
+          <p>
+            The same process can be used for different objects. There are other
+            artefacts that have a button in order to work, just like the
+            blender, but they may give a different output
+          </p>
+          <li>How to create a Class</li>
+          <pre><code>
+
+class Dice {
+    constructor(sides=6){
+        this.sides = sides;
+    }
+        
+    roll(){
+        return Math.floor(this.sides * Math.random() + 1)
+    }
+}
+          </code></pre>
+        </ul>
+      </div>
+      <div>
+        <h3>Questions:</h3>
+        <ol>
+          <li>
+            So far many things in javaScript are called Objects. It came to my
+            mind that anything with brackets {} is a object. Is there anything
+            with bracckets that cannot be called objects?
+          </li>
+          <li>
+            I know that in function, we can set dafault for parameters. By doing
+            something like function name(parameter1 = 0). Can we do something
+            similar with classes?
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="secondPart">
+      <h3>Challenges</h3>
+      <ol>
+        <li>
+          Create a class Dog with values name, age, location and how many walks
+          that the animal walked. Then create functions inside of the class, it
+          has to do anything with the attributes of dog.
+        </li>
+      </ol>
+      <pre><code>
+class Dog {
+    constructor(name, age, location, walks, distanceWalking) {
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.walks = 0;
+        this.distanceWalking = 0;
+    }
+          
+    sound() {
+        return `Hey, I am ${this.name}, I am form ${this.name}, WOFFFF`;
+    }
+          
+    goingforAWalk(distance) {
+        this.walks++;
+        this.distanceWalking += distance;
+    }
+    }
+      </code></pre>
+
+      <a href="group/Tic-Tac-Toe.html">Group Ativity</a>
+    </div>
+  </body>
+</html>
