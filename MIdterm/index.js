@@ -1,3 +1,7 @@
+let tasks = 0;
+const squares = document.querySelectorAll(".square");
+const deleteButtons = document.querySelectorAll(".delete");
+
 function createTask(palabra) {
   let list = document.querySelector("#list");
 
@@ -20,6 +24,8 @@ function createTask(palabra) {
   task.appendChild(word);
   task.appendChild(closeButton);
 
+  tasks++;
+
   list.appendChild(task);
 }
 
@@ -30,11 +36,8 @@ addButtonTask.addEventListener("click", function () {
   newTask.value = "";
 });
 
-const tasks = document.querySelectorAll(".task");
-const squares = document.querySelectorAll(".square");
-const deleteButtons = document.querySelectorAll(".delete");
-
-for (let x = 0; x < tasks.length; x++) {
+for (let x = 0; x < tasks; x++) {
+  console.log("For loop is working");
   squares[x].addEventListener("click", function () {
     let content = squares[x].querySelector("h1");
     content.innerHTML = content.innerHTML == "" ? "X" : "";
