@@ -38,8 +38,6 @@ function createTask(palabra) {
     let parent = closeButton.parentElement;
     parent.parentNode.removeChild(parent);
   });
-
-  console.log(tasks.length);
 }
 
 let addButtonTask = document.querySelector(".add");
