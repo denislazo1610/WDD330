@@ -1,4 +1,4 @@
-let tasks = 0;
+let tasks = document.querySelectorAll(".task");
 const squares = document.querySelectorAll(".square");
 const deleteButtons = document.querySelectorAll(".delete");
 
@@ -10,6 +10,7 @@ function createTask(palabra) {
 
   let square = document.createElement("div");
   square.classList.add("square");
+
   let forX = document.createElement("h1");
   square.appendChild(forX);
 
@@ -24,9 +25,21 @@ function createTask(palabra) {
   task.appendChild(word);
   task.appendChild(closeButton);
 
-  tasks++;
-
   list.appendChild(task);
+
+  square.addEventListener("click", function () {
+    let content = square.querySelector("h1");
+    content.innerHTML = content.innerHTML == "" ? "X" : "";
+    let sibling = square.nextElementSibling;
+    sibling.classList.toggle("crossed");
+  });
+
+  closeButton.addEventListener("click", function () {
+    let parent = closeButton.parentElement;
+    parent.parentNode.removeChild(parent);
+  });
+
+  console.log(tasks.length);
 }
 
 let addButtonTask = document.querySelector(".add");
@@ -35,18 +48,3 @@ addButtonTask.addEventListener("click", function () {
   createTask(newTask.value);
   newTask.value = "";
 });
-
-for (let x = 0; x < tasks; x++) {
-  console.log("For loop is working");
-  squares[x].addEventListener("click", function () {
-    let content = squares[x].querySelector("h1");
-    content.innerHTML = content.innerHTML == "" ? "X" : "";
-    let sibling = squares[x].nextElementSibling;
-    sibling.classList.toggle("crossed");
-  });
-
-  deleteButtons[x].addEventListener("click", function () {
-    let parent = deleteButtons[x].parentElement;
-    parent.parentNode.removeChild(parent);
-  });
-}
