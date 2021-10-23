@@ -2,6 +2,9 @@ let tasks = document.querySelectorAll(".task");
 const squares = document.querySelectorAll(".square");
 const deleteButtons = document.querySelectorAll(".delete");
 
+let numberTaskLeft = document.querySelector("#items_left");
+numberTaskLeft.innerHTML = 0;
+
 function createTask(palabra) {
   let list = document.querySelector("#list");
 
@@ -27,16 +30,24 @@ function createTask(palabra) {
 
   list.appendChild(task);
 
+  tasks = document.querySelectorAll(".task");
+  numberTaskLeft.innerHTML = tasks.length;
+
   square.addEventListener("click", function () {
     let content = square.querySelector("h1");
     content.innerHTML = content.innerHTML == "" ? "X" : "";
     let sibling = square.nextElementSibling;
     sibling.classList.toggle("crossed");
+
+    sibling.classList.contains("crossed")
+      ? numberTaskLeft.innerHTML--
+      : numberTaskLeft.innerHTML++;
   });
 
   closeButton.addEventListener("click", function () {
     let parent = closeButton.parentElement;
     parent.parentNode.removeChild(parent);
+    numberTaskLeft.innerHTML--;
   });
 }
 
@@ -45,4 +56,36 @@ addButtonTask.addEventListener("click", function () {
   let newTask = document.querySelector(".newTask");
   createTask(newTask.value);
   newTask.value = "";
+});
+
+let showAllButton = document.querySelector(".showAll");
+showAllButton.addEventListener("click", function () {
+  for (let i = 0; i < tasks.length; i++) {
+    tasks[i].classList.contains("hidden")
+      ? tasks[i].classList.remove("hidden")
+      : 0;
+  }
+});
+
+let showNotCompletedButton = document.querySelector(".showNotCompleted");
+showNotCompletedButton.addEventListener("click", function () {
+  for (let i = 0; i < tasks.length; i++) {
+    let child = tasks[i].querySelector("h3");
+    tasks[i].classList.contains("hidden")
+      ? tasks[i].classList.remove("hidden")
+      : 0;
+    child.classList.contains("crossed") ? tasks[i].classList.add("hidden") : 0;
+  }
+});
+
+let showCompletedButton = document.querySelector(".showCompleted");
+showCompletedButton.addEventListener("click", function () {
+  for (let i = 0; i < tasks.length; i++) {
+    let child = tasks[i].querySelector("h3");
+    tasks[i].classList.contains("hidden")
+      ? tasks[i].classList.remove("hidden")
+      : 0;
+
+    child.classList.contains("crossed") ? 0 : tasks[i].classList.add("hidden");
+  }
 });
