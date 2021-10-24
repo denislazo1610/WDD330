@@ -5,6 +5,23 @@ const deleteButtons = document.querySelectorAll(".delete");
 let numberTaskLeft = document.querySelector("#items_left");
 numberTaskLeft.innerHTML = 0;
 
+console.log(localStorage);
+
+// localStorage.removeItem(4);
+// localStorage.removeItem(1);
+
+for (let i = 0; i < localStorage.length; i++) {
+  createTask(localStorage.getItem(i));
+}
+
+function addLocalStorage(palabra) {
+  let length = localStorage.length;
+  console.log(length);
+  length == 0
+    ? localStorage.setItem(0, palabra)
+    : localStorage.setItem(length++, palabra);
+}
+
 function createTask(palabra) {
   let list = document.querySelector("#list");
 
@@ -55,6 +72,7 @@ let addButtonTask = document.querySelector(".add");
 addButtonTask.addEventListener("click", function () {
   let newTask = document.querySelector(".newTask");
   createTask(newTask.value);
+  addLocalStorage(newTask.value);
   newTask.value = "";
 });
 
