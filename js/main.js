@@ -21,6 +21,10 @@ const block1 = [
     label: "Week5 notes",
     url: "week5/index.html",
   },
+  {
+    label: "Midterm",
+    url: "Midterm/index.html",
+  },
 ];
 
 const block2 = [{}];
