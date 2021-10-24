@@ -23,7 +23,7 @@ const block1 = [
   },
   {
     label: "Midterm",
-    url: "midterm/index.html",
+    url: "MIdterm/index.html",
   },
 ];
 
