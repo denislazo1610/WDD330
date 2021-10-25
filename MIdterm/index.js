@@ -7,11 +7,13 @@ numberTaskLeft.innerHTML = 0;
 
 console.log(localStorage);
 
-// localStorage.removeItem(4);
+// localStorage.removeItem(0);
 // localStorage.removeItem(1);
 
 for (let i = 0; i < localStorage.length; i++) {
-  createTask(localStorage.getItem(i));
+  if (typeof i == typeof NaN) {
+    createTask(localStorage[i]);
+  }
 }
 
 function addLocalStorage(palabra) {
@@ -62,6 +64,15 @@ function createTask(palabra) {
   });
 
   closeButton.addEventListener("click", function () {
+    let sibling = closeButton.previousSibling;
+
+    for (let i = 0; i < localStorage.length; i++) {
+      if ((typeof i == typeof NaN) & (localStorage.getItem(i) == palabra)) {
+        localStorage.removeItem(i);
+        console.log(localStorage);
+      }
+    }
+
     let parent = closeButton.parentElement;
     parent.parentNode.removeChild(parent);
     numberTaskLeft.innerHTML--;
@@ -71,8 +82,8 @@ function createTask(palabra) {
 let addButtonTask = document.querySelector(".add");
 addButtonTask.addEventListener("click", function () {
   let newTask = document.querySelector(".newTask");
-  createTask(newTask.value);
   addLocalStorage(newTask.value);
+  createTask(newTask.value);
   newTask.value = "";
 });
 
