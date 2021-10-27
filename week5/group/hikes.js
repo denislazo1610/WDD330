@@ -61,6 +61,7 @@ export default class Hikes {
       const lines = document.createElement("li");
       const content = document.createElement("a");
       const information = document.createElement("ul");
+      information.classList.add("hidden");
       // information.classList.add(``);
       content.innerHTML = name;
       lines.appendChild(content);
@@ -73,18 +74,26 @@ export default class Hikes {
   // show one hike with full details in the parentElement
   showOneHike(hikeName) {
     const example = this.getHikeByName(hikeName);
-    console.log(example.description);
+    return example.description;
   }
   // in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
   addHikeListener() {
     // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
 
-    let sizeOfList = this.parentElement.children.length;
+    let hikes = this.parentElement.querySelectorAll("li");
+    let sizeOfList = hikes.length;
+
     const list = this.getAllHikes();
 
     for (let i = 0; i < sizeOfList; i++) {
-      this.parentElement.children[i].addEventListener("click", function () {
+      hikes[i].addEventListener("click", function () {
         console.log(`You are selecting the hike number ${i} `);
+        let sibling = hikes[i].nextElementSibling;
+        let parrafo = document.createElement("p");
+        parrafo.textContent = hikeList[i].description;
+
+        sibling.appendChild(parrafo);
+        sibling.classList.toggle("hidden");
       });
     }
 

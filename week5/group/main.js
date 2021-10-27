@@ -8,5 +8,5 @@ myHike.showHikeList();
 
 // myHike.showOneHike("Bechler Falls");
 
-console.log(myHike.addHikeListener());
+myHike.addHikeListener();
 // myHike.parentElement.length;

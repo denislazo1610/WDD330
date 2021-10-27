@@ -67,8 +67,12 @@ function createTask(palabra) {
     let sibling = closeButton.previousSibling;
 
     for (let i = 0; i < localStorage.length; i++) {
-      if ((typeof i == typeof NaN) & (localStorage.getItem(i) == palabra)) {
+      if ((typeof i == typeof NaN) & (localStorage.getItem(i) === palabra)) {
+        let later = localStorage.getItem(i++);
         localStorage.removeItem(i);
+        while (i < localStorage.length) {
+          localStorage.setItem(i, later);
+        }
         console.log(localStorage);
       }
     }
