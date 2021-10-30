@@ -27,7 +27,12 @@ const block1 = [
   },
 ];
 
-const block2 = [{}];
+const block2 = [
+  {
+    label: "Week7 notes",
+    url: "week7/index.html",
+  },
+];
 
 var list1 = document.querySelector("ol#first");
 
@@ -38,4 +43,15 @@ for (var number = 0; number < block1.length; number++) {
   a.href = block1[number].url;
   li.appendChild(a);
   list1.appendChild(li);
+}
+
+var list2 = document.querySelector("ol#second");
+
+for (var number = 0; number < block2.length; number++) {
+  var li = document.createElement("li");
+  var a = document.createElement("a");
+  a.innerHTML = block2[number].label;
+  a.href = block2[number].url;
+  li.appendChild(a);
+  list2.appendChild(li);
 }

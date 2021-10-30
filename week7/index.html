@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7</title>
+    <link rel="stylesheet" href="../week1/index.css" />
+  </head>
+  <body>
+    <h1>Week 7</h1>
+    <div id="firstPart">
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>Exceptions</li>
+          <p>
+            Exceptions are errors that produce a return value (key value) that
+            can then be used by the program to deal with the error
+          </p>
+          <li>Strict Mode</li>
+          <p>
+            Strict mode, this will produce more errors since it is going to
+            correct poor style codings
+          </p>
+          <li>Debugging in the Browser</li>
+          <p>
+            It is the proccess of finding out where bugs occur in the code and
+            then dealing with them
+          </p>
+          <li>Debugging Tools</li>
+          <p>
+            Modern browsers also have a debugging tool that allows you to set
+            breakpoints in the code to track bugs and you will be able to modify
+            them. Something really useful is the tool "debugger".
+          </p>
+        </ul>
+      </div>
+      <div>
+        <h3>Questions:</h3>
+        <ol>
+          <li>
+            Is the toEqual() only use in if conditions, if not, then for what
+            else it can be used? I am not really sure if this is supposoed to
+            give a true or false return
+          </li>
+          <br />
+          <li>
+            Besides using the tool "debugger" to catch errors, is there any tool
+            that we can use in VSC? Something similar tot he debugger but not in
+            the browser
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="secondPart">
+      <h3>Challenges</h3>
+      <ol>
+        <li>
+          Create a class Dog with values name, age, location and how many walks
+          that the animal walked. Then create functions inside of the class, it
+          has to do anything with the attributes of dog.
+        </li>
+      </ol>
+      <pre><code>
+class Dog {
+    constructor(name, age, location, walks, distanceWalking) {
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.walks = 0;
+        this.distanceWalking = 0;
+    }
+          
+    sound() {
+        return `Hey, I am ${this.name}, I am form ${this.name}, WOFFFF`;
+    }
+          
+    goingforAWalk(distance) {
+        this.walks++;
+        this.distanceWalking += distance;
+    }
+    }
+      </code></pre>
+
+      <a href="group/index.html">Group Ativity</a>
+    </div>
+  </body>
+</html>
