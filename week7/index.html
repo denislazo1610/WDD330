@@ -13,77 +13,74 @@
       <div>
         <h3>Notes</h3>
         <ul>
-          <li>Exceptions</li>
-          <p>
-            Exceptions are errors that produce a return value (key value) that
-            can then be used by the program to deal with the error
-          </p>
-          <li>Strict Mode</li>
-          <p>
-            Strict mode, this will produce more errors since it is going to
-            correct poor style codings
-          </p>
-          <li>Debugging in the Browser</li>
-          <p>
-            It is the proccess of finding out where bugs occur in the code and
-            then dealing with them
-          </p>
-          <li>Debugging Tools</li>
-          <p>
-            Modern browsers also have a debugging tool that allows you to set
-            breakpoints in the code to track bugs and you will be able to modify
-            them. Something really useful is the tool "debugger".
-          </p>
+          <li>Call and Apply Meethods</li>
+          <pre><code>
+function sayHello(){
+  return `Hello, my name is ${ this.name}`
+}
+
+const clark = {name:'Clark'};
+
+sayHello.call(clark);
+          </code></pre>
+          <li>Temporary Variable</li>
+          <p>Temp will not be used outstide of the function</p>
+          <pre><code> 
+let a = 1;
+let b = 2;
+
+(()=> { 
+const temp = a;
+a = b;
+b = temp;
+ })
+ </code></pre>
+          <li>Functions that rewrite itself</li>
+          <pre><code>
+            function party(){
+              console.log('Wow this is amazing!');
+              party = function(){
+                  console.log('Been there, got the T-Shirt');
+              }
+          }
+          </code></pre>
         </ul>
       </div>
       <div>
         <h3>Questions:</h3>
         <ol>
           <li>
-            Is the toEqual() only use in if conditions, if not, then for what
-            else it can be used? I am not really sure if this is supposoed to
-            give a true or false return
+            Something otu of the lesson, still a good question for me. What
+            distributions of linux is the most used? What is the best?
           </li>
           <br />
           <li>
-            Besides using the tool "debugger" to catch errors, is there any tool
-            that we can use in VSC? Something similar tot he debugger but not in
-            the browser
+            Once you create a function that call itself, can you still call the
+            outer scoop of the function again?
+          </li>
+          <br />
+          <li>
+            Also, I know about Kali linuz, is there any other distribution like
+            t but better?
           </li>
         </ol>
       </div>
     </div>
     <div id="secondPart">
-      <h3>Challenges</h3>
+      <h3>Challenge</h3>
       <ol>
-        <li>
-          Create a class Dog with values name, age, location and how many walks
-          that the animal walked. Then create functions inside of the class, it
-          has to do anything with the attributes of dog.
-        </li>
+        <li>Trying to learn the catch statement</li>
       </ol>
       <pre><code>
-class Dog {
-    constructor(name, age, location, walks, distanceWalking) {
-        this.name = name;
-        this.age = age;
-        this.location = location;
-        this.walks = 0;
-        this.distanceWalking = 0;
-    }
-          
-    sound() {
-        return `Hey, I am ${this.name}, I am form ${this.name}, WOFFFF`;
-    }
-          
-    goingforAWalk(distance) {
-        this.walks++;
-        this.distanceWalking += distance;
-    }
-    }
+        try {
+          adddlert("Welcome guest!");
+        }
+        catch(err) {
+          document.getElementById("demo").innerHTML = err.message;
+        }
       </code></pre>
 
-      <a href="group/index.html">Group Ativity</a>
+      <a href="group/hiking-complete.html">Group Ativity</a>
     </div>
   </body>
 </html>
