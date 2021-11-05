@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 7</title>
+    <link rel="stylesheet" href="../week1/index.css" />
+  </head>
+  <body>
+    <h1>Week 7</h1>
+    <div id="firstPart">
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>Call and Apply Meethods</li>
+          <pre><code>
+function sayHello(){
+  return `Hello, my name is ${ this.name}`
+}
+
+const clark = {name:'Clark'};
+
+sayHello.call(clark);
+          </code></pre>
+          <li>Temporary Variable</li>
+          <p>Temp will not be used outstide of the function</p>
+          <pre><code> 
+let a = 1;
+let b = 2;
+
+(()=> { 
+const temp = a;
+a = b;
+b = temp;
+ })
+ </code></pre>
+          <li>Functions that rewrite itself</li>
+          <pre><code>
+            function party(){
+              console.log('Wow this is amazing!');
+              party = function(){
+                  console.log('Been there, got the T-Shirt');
+              }
+          }
+          </code></pre>
+        </ul>
+      </div>
+      <div>
+        <h3>Questions:</h3>
+        <ol>
+          <li>
+            Something otu of the lesson, still a good question for me. What
+            distributions of linux is the most used? What is the best?
+          </li>
+          <br />
+          <li>
+            Once you create a function that call itself, can you still call the
+            outer scoop of the function again?
+          </li>
+          <br />
+          <li>
+            Also, I know about Kali linuz, is there any other distribution like
+            t but better?
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="secondPart">
+      <h3>Challenge</h3>
+      <ol>
+        <li>Trying to learn the catch statement</li>
+      </ol>
+      <pre><code>
+        try {
+          adddlert("Welcome guest!");
+        }
+        catch(err) {
+          document.getElementById("demo").innerHTML = err.message;
+        }
+      </code></pre>
+
+      <a href="group/hiking-complete.html">Group Ativity</a>
+    </div>
+  </body>
+</html>
