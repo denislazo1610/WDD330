@@ -69,15 +69,17 @@ b = temp;
     <div id="secondPart">
       <h3>Challenge</h3>
       <ol>
-        <li>Trying to learn the catch statement</li>
+        <li>Try to make a function that can accept as many paremeters, it can do anything</li>
       </ol>
       <pre><code>
-        try {
-          adddlert("Welcome guest!");
-        }
-        catch(err) {
-          document.getElementById("demo").innerHTML = err.message;
-        }
+function add(...numbers){
+  let sum = 0;
+  for(let i = 0; i < numbers.length; i++){
+    sum = sum + numbers[i];
+  }
+
+  return sum;
+}
       </code></pre>
 
       <a href="group/index.html">Group Ativity</a>
