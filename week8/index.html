@@ -13,55 +13,47 @@
       <div>
         <h3>Notes</h3>
         <ul>
-          <li>Call and Apply Meethods</li>
+          <li>Usinb transitions</li>
           <pre><code>
-function sayHello(){
-  return `Hello, my name is ${ this.name}`
+.circle{
+  width: 300px;
+  height: 300px;
+  background-color: magenta;
+  transition: background-color 1s ease-in, border-radius 2s;
 }
-
-const clark = {name:'Clark'};
-
-sayHello.call(clark);
+          
+.circle:hover {
+  background-color: cyan;
+  border-radius: 50%;
+}
           </code></pre>
-          <li>Temporary Variable</li>
-          <p>Temp will not be used outstide of the function</p>
+          <li>What is Canvas</li>
+          <p>With canvas, we can draw shapes and lines, 
+            arcs and text, gradients and patterns. In addition,
+             canvas gives us the power to manipulate pixels in images 
+             and even video. </p>
           <pre><code> 
-let a = 1;
-let b = 2;
-
-(()=> { 
-const temp = a;
-a = b;
-b = temp;
- })
+&ltcanvas&gt
+  Sorry! Your browser doesn’t support Canvas.
+&ltcanvas&gt
  </code></pre>
-          <li>Functions that rewrite itself</li>
-          <pre><code>
-            function party(){
-              console.log('Wow this is amazing!');
-              party = function(){
-                  console.log('Been there, got the T-Shirt');
-              }
-          }
-          </code></pre>
-        </ul>
+          
       </div>
       <div>
         <h3>Questions:</h3>
         <ol>
           <li>
-            Something otu of the lesson, still a good question for me. What
-            distributions of linux is the most used? What is the best?
+            I was thinking about creating a Tetrix game, however, can I use canvas for that?
           </li>
           <br />
           <li>
-            Once you create a function that call itself, can you still call the
-            outer scoop of the function again?
+            For the spread operators, is there any other coding that is similar to that?
           </li>
           <br />
           <li>
-            Also, I know about Kali linuz, is there any other distribution like
-            t but better?
+            Something out of the topic, can Linux support videogames? I know there is a small percentage
+            of people using it, and maybe that is why videogames company does not want to spend on linux.
+            But why don't people use more linux? why is Linux no popular?
           </li>
         </ol>
       </div>
@@ -70,17 +62,17 @@ b = temp;
       <h3>Challenge</h3>
       <ol>
         <li>Try to make a function that can accept as many paremeters, it can do anything</li>
-      </ol>
-      <pre><code>
-function add(...numbers){
-  let sum = 0;
-  for(let i = 0; i < numbers.length; i++){
-    sum = sum + numbers[i];
+        <pre><code>
+  function add(...numbers){
+    let sum = 0;
+    for(let i = 0; i < numbers.length; i++){
+      sum = sum + numbers[i];
+    }
+  
+    return sum;
   }
-
-  return sum;
-}
-      </code></pre>
+        </code></pre>
+      </ol>
 
       <a href="group/index.html">Group Ativity</a>
     </div>
