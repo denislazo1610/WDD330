@@ -14,9 +14,10 @@
         <h3>Notes</h3>
         <ul>
           <li>How to use the Optional Chaining (?.)</li>
-          <p>It is going to see if an object has a specific attribute
-            without compiling an error. If there is not that 
-            attribute, then it is going to return a undefined
+          <p>
+            It is going to see if an object has a specific attribute without
+            compiling an error. If there is not that attribute, then it is going
+            to return a undefined
           </p>
           <pre><code>
 
@@ -37,9 +38,10 @@ console.log("nope" && "no")
 then it return the last value)
  </code></pre>
           <li>How to use the Nullish Coalescing Operator</li>
-          <p>If we use || then it is going to return the true values.
-            However, how about if the value of a variable is 0? Using the 
-            || will not be a option. We have to use the ?? operator
+          <p>
+            If we use || then it is going to return the true values. However,
+            how about if the value of a variable is 0? Using the || will not be
+            a option. We have to use the ?? operator
           </p>
           <pre><code>
 let guests = 0;
@@ -67,15 +69,26 @@ anything that is not undefined or null)
     <div id="secondPart">
       <h3>Challenge</h3>
       <ol>
-        <li>Trying to learn the catch statement</li>
+        <li>
+          Make an object called Restaurant, and this one will have a function
+          inside called "order". Then outside of the object, you will call the
+          function. However, if the function does not exist, then print out
+          "Method does not exist". Do this again with another function that does
+          not exist. Remember using the Optional Chaining
+        </li>
       </ol>
       <pre><code>
-        try {
-          adddlert("Welcome guest!");
-        }
-        catch(err) {
-          document.getElementById("demo").innerHTML = err.message;
-        }
+        const restaurant = {
+          order(cheese, peperoni) {
+            return [
+              `This food has ${cheese} pounds of cheese and ${peperoni} peperonies`,
+            ];
+          },
+        };
+  
+        // Methods
+        console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+        console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
       </code></pre>
 
       <a href="group/index-START.html">Group Ativity</a>
