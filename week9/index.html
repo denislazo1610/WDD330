@@ -13,36 +13,43 @@
       <div>
         <h3>Notes</h3>
         <ul>
-          <li>Call and Apply Meethods</li>
+          <li>How to use the Optional Chaining (?.)</li>
+          <p>It is going to see if an object has a specific attribute
+            without compiling an error. If there is not that 
+            attribute, then it is going to return a undefined
+          </p>
           <pre><code>
-function sayHello(){
-  return `Hello, my name is ${ this.name}`
-}
 
-const clark = {name:'Clark'};
+console.log(restaurant.opening.monday?.time)
 
-sayHello.call(clark);
           </code></pre>
-          <li>Temporary Variable</li>
-          <p>Temp will not be used outstide of the function</p>
+          <li>Short Circuiting</li>
+          <p>How it is really works</p>
           <pre><code> 
-let a = 1;
-let b = 2;
+console.log('true' || false) 
+// 'true' (|| will find the true value) 
 
-(()=> { 
-const temp = a;
-a = b;
-b = temp;
- })
+console.log('yes' && 0) 
+// 0 (&& will find the false value)
+
+console.log("nope" && "no") 
+// "no" (If both are true values, 
+then it return the last value)
  </code></pre>
-          <li>Functions that rewrite itself</li>
+          <li>How to use the Nullish Coalescing Operator</li>
+          <p>If we use || then it is going to return the true values.
+            However, how about if the value of a variable is 0? Using the 
+            || will not be a option. We have to use the ?? operator
+          </p>
           <pre><code>
-            function party(){
-              console.log('Wow this is amazing!');
-              party = function(){
-                  console.log('Been there, got the T-Shirt');
-              }
-          }
+let guests = 0;
+
+guests = guests ?? 10; 
+
+console.log(guests) // 0 (?? it is going to return 
+anything that is not undefined or null)
+
+
           </code></pre>
         </ul>
       </div>
@@ -54,15 +61,6 @@ b = temp;
             distributions of linux is the most used? What is the best?
           </li>
           <br />
-          <li>
-            Once you create a function that call itself, can you still call the
-            outer scoop of the function again?
-          </li>
-          <br />
-          <li>
-            Also, I know about Kali linuz, is there any other distribution like
-            t but better?
-          </li>
         </ol>
       </div>
     </div>
