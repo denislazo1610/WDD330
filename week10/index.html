@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 9</title>
+    <link rel="stylesheet" href="../week1/index.css" />
+  </head>
+  <body>
+    <h1>Week 9</h1>
+    <div id="firstPart">
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>How to use the Optional Chaining (?.)</li>
+          <p>
+            It is going to see if an object has a specific attribute without
+            compiling an error. If there is not that attribute, then it is going
+            to return a undefined
+          </p>
+          <pre><code>
+
+console.log(restaurant.opening.monday?.time)
+
+          </code></pre>
+          <li>Short Circuiting</li>
+          <p>How it is really works</p>
+          <pre><code> 
+console.log('true' || false) 
+// 'true' (|| will find the true value) 
+
+console.log('yes' && 0) 
+// 0 (&& will find the false value)
+
+console.log("nope" && "no") 
+// "no" (If both are true values, 
+then it return the last value)
+ </code></pre>
+          <li>How to use the Nullish Coalescing Operator</li>
+          <p>
+            If we use || then it is going to return the true values. However,
+            how about if the value of a variable is 0? Using the || will not be
+            a option. We have to use the ?? operator
+          </p>
+          <pre><code>
+let guests = 0;
+
+guests = guests ?? 10; 
+
+console.log(guests) // 0 (?? it is going to return 
+anything that is not undefined or null)
+
+
+          </code></pre>
+        </ul>
+      </div>
+      <div>
+        <h3>Questions:</h3>
+        <ol>
+          <li>
+            I have been using the Optional Chaining for a couple days, but it
+            seems that I can use it only with objects. Is there any other
+            operator where it can prove the existence of a function without
+            being inside of an object?
+          </li>
+          <br />
+        </ol>
+      </div>
+    </div>
+    <div id="secondPart">
+      <h3>Challenge</h3>
+      <ol>
+        <li>
+          Make an object called Restaurant, and this one will have a function
+          inside called "order". Then outside of the object, you will call the
+          function. However, if the function does not exist, then print out
+          "Method does not exist". Do this again with another function that does
+          not exist. Remember using the Optional Chaining
+        </li>
+      </ol>
+      <pre><code>
+        const restaurant = {
+          order(cheese, peperoni) {
+            return [
+              `This food has ${cheese} pounds of cheese and ${peperoni} peperonies`,
+            ];
+          },
+        };
+  
+        // Methods
+        console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+        console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
+      </code></pre>
+
+      <a href="group/.html">Group Ativity</a>
+    </div>
+  </body>
+</html>
