@@ -44,6 +44,10 @@ const block2 = [
     label: "Week10 notes",
     url: "week10/index.html",
   },
+  {
+    label: "Week11 notes",
+    url: "week11/index.html",
+  },
 ];
 
 var list1 = document.querySelector("ol#first");

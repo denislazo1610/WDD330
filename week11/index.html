@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 11</title>
+    <link rel="stylesheet" href="../week1/index.css" />
+  </head>
+  <body>
+    <h1>Week 11</h1>
+    <div id="firstPart">
+      <div>
+        <h3>Notes</h3>
+        <ul>
+          <li>How to for-loop an Object?</li>
+          <p>Well it depends on what do you want to get.</p>
+          <p>If you want to get the entries do this.</p>
+          <pre><code>
+
+for (const [number, person] of Object.entries(scores))
+console.log(`Goal ${number + 1}: ${person}`);
+
+          </code></pre>
+          <p>To get the values of an object</p>
+
+          <pre><code> 
+for (const value of Object.values(scores))
+console.log(value);
+ </code></pre>
+          <p>or</p>
+          <pre><code>
+const entries = Object.entries(openingHours);
+console.log(entries);
+            
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open at ${open} and close at ${close}`);
+  // In here we have objects in objects
+}
+
+          </code></pre>
+        </ul>
+      </div>
+      <div>
+        <h3>Questions:</h3>
+        <ol>
+          <li>
+            I have been using the Optional Chaining for a couple days, but it
+            seems that I can use it only with objects. Is there any other
+            operator where it can prove the existence of a function without
+            being inside of an object?
+          </li>
+          <br />
+        </ol>
+      </div>
+    </div>
+    <div id="secondPart">
+      <h3>Challenge</h3>
+      <ol>
+        <li>
+          Print the 3 odds to the console, but in a nice formatted way, exactly
+          like this:
+        </li>
+        <p>Odd of victory Bayern Munich: 1.33</p>
+        <p>Odd of draw: 3.25</p>
+        <p>Odd of victory Borrussia Dortmund: 6.5</p>
+        <p>
+          Get the team names directly from the game object, don't hardcode them
+          (except for "draw").
+        </p>
+      </ol>
+      <pre><code>
+        const game = {
+          team1: 'Bayern Munich',
+          team2: 'Borrussia Dortmund',
+          players: [
+            [
+              'Neuer',
+              'Pavard',
+              'Martinez',
+              'Alaba',
+              'Davies',
+              'Kimmich',
+              'Goretzka',
+              'Coman',
+              'Muller',
+              'Gnarby',
+              'Lewandowski',
+            ],
+            [
+              'Burki',
+              'Schulz',
+              'Hummels',
+              'Akanji',
+              'Hakimi',
+              'Weigl',
+              'Witsel',
+              'Hazard',
+              'Brandt',
+              'Sancho',
+              'Gotze',
+            ],
+          ],
+          score: '4:0',
+          scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+          date: 'Nov 9th, 2037',
+          odds: {
+            team1: 1.33,
+            x: 3.25,
+            team2: 6.5,
+          },
+        };
+
+
+        // Solution
+
+        for (const [team, score] of Object.entries(game.odds))
+  console.log(
+    `Odd of ${'x' == team ? 'draw' : `victory ${game[team]}`}: ${score}`
+  );
+      </code></pre>
+
+      <a href="group/index.html">Group Ativity</a>
+    </div>
+  </body>
+</html>
