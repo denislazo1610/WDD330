@@ -48,6 +48,10 @@ const block2 = [
     label: "Week11 notes",
     url: "week11/index.html",
   },
+  {
+    label: "Final Project",
+    url: "https://denislazo1610.github.io/Tia-Mila-Tienda/",
+  },
 ];
 
 var list1 = document.querySelector("ol#first");
